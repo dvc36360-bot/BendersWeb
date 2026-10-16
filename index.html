@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#061226">
+<meta name="description" content="An independent BendersMC fan guide with game modes, commands, bending tips and links to the official store.">
+<title>BendersMC Fan Hub | Guide, Modes & Shop</title>
+<style>
+:root{--bg:#040a16;--panel:#09162a;--panel2:#0d203a;--line:#1b3c60;--text:#edf6ff;--muted:#a8bed7;--blue:#17a9ff;--cyan:#27e2ff;--purple:#a855f7;--gold:#ffd54a;--green:#66ef9a;--red:#ff5c69}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#123d71 0,transparent 45%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#050d1bed;border-bottom:1px solid #173353;backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:68px}.brand{font-weight:1000;letter-spacing:-1px;font-size:1.35rem;font-style:italic}.brand span{color:var(--cyan);text-shadow:0 0 16px #00aaff88}.navlinks{display:flex;gap:18px;align-items:center}.navlinks a{color:#d4e5f8;font-weight:700;font-size:.9rem}.navlinks a:hover{color:var(--cyan)}.menu{display:none;background:transparent;border:1px solid var(--line);color:white;border-radius:10px;padding:7px 10px}
+.hero{padding:70px 0 46px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,#061226f2 0%,#061226d9 53%,#06122675 100%),radial-gradient(circle at 82% 38%,#168cff55,transparent 30%);pointer-events:none}.hero-inner{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}.eyebrow{color:var(--cyan);text-transform:uppercase;font-size:.76rem;font-weight:900;letter-spacing:2px}.hero h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:.99;letter-spacing:-2px;margin:14px 0 18px}.hero h1 em{font-style:normal;color:var(--cyan);text-shadow:0 0 28px #008cff66}.hero p{max-width:620px;color:#c3d6eb;font-size:1.05rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid #285078;background:#0b1b31;color:white;font-weight:850;cursor:pointer;transition:.18s}.btn:hover{transform:translateY(-2px);border-color:var(--cyan)}.btn.primary{background:linear-gradient(110deg,#078bff,#13c9ed);border:0;color:#00101c;box-shadow:0 8px 28px #008cff33}.btn.purple{background:linear-gradient(110deg,#772cf0,#b45cff);border:0}.hero-art{min-height:300px;border:1px solid #236094;border-radius:24px;background:radial-gradient(circle at 50% 45%,#1673b655,transparent 50%),linear-gradient(145deg,#0e2b4b,#080f23 70%);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 18px 70px #0008}.elements{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:20px;width:min(360px,100%)}.element{border:1px solid #245077;border-radius:15px;background:#081a2cdd;text-align:center;padding:17px 8px;font-weight:900}.element b{display:block;font-size:2rem;margin-bottom:5px}.element small{display:block;color:var(--muted);font-weight:600}.water b{color:#28c5ff}.fire b{color:#ff634c}.earth b{color:#8bea57}.air b{color:#a9e9ff}
+section{padding:42px 0;scroll-margin-top:80px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}.section-head h2{font-size:clamp(1.7rem,4vw,2.35rem);margin:4px 0}.section-head p{color:var(--muted);margin:0;max-width:520px}.tag{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--cyan);font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(150deg,#0d2038,#071326);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0;box-shadow:0 10px 30px #0002}.card h3{margin:8px 0 7px;font-size:1.2rem}.card p{margin:0 0 15px;color:var(--muted);font-size:.93rem}.card .emoji{font-size:2rem}.card a.textlink{color:var(--cyan);font-weight:850}.mode-top{display:flex;align-items:center;gap:12px}.mode-top .emoji{font-size:2.2rem}
+.rank{position:relative;overflow:hidden}.rank:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-45px;top:-45px;background:var(--glow,#1b9fff);filter:blur(50px);opacity:.22}.rank .tier{font-weight:1000;font-size:1.35rem}.rank .perks{color:var(--muted);font-size:.9rem;min-height:68px}.rank .btn{width:100%;margin-top:8px}.rank .price{color:var(--gold);font-weight:900}.rank.pro{--glow:#ffd54a}.rank.expert{--glow:#00bfff}.rank.master{--glow:#b855ff}.rank.avatar{--glow:#ff4d4d}.rank.titan{--glow:#00f0e8}
+.notice{padding:15px 17px;border:1px solid #5d4b1d;background:#241d0b;border-radius:13px;color:#f7e4a4;font-size:.9rem;margin-top:18px}
+.searchrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}.searchrow input,.searchrow select{background:#071326;color:white;border:1px solid var(--line);padding:11px 13px;border-radius:10px;min-width:0}.searchrow input{flex:1;min-width:180px}
+.command-table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px;background:#08162a;border:1px solid var(--line)}.command-table th,.command-table td{text-align:left;padding:12px 14px;border-bottom:1px solid #19324d}.command-table th{color:var(--cyan);font-size:.82rem;text-transform:uppercase;letter-spacing:.8px}.command-table code{color:#9bdfff;background:#102944;padding:4px 7px;border-radius:6px;white-space:nowrap}.command-table td:last-child{color:var(--muted)}.tablewrap{overflow-x:auto;border-radius:14px}
+.ability-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.ability{padding:16px;border-radius:14px;background:#08182b;border:1px solid var(--line)}.ability b{display:block;margin-bottom:4px}.ability span{font-size:.87rem;color:var(--muted)}
+.faq details{border:1px solid var(--line);background:#08162a;border-radius:12px;padding:14px 16px;margin-bottom:10px}.faq summary{cursor:pointer;font-weight:850}.faq details p{color:var(--muted);margin-bottom:0}
+.cta{padding:27px;border-radius:20px;background:linear-gradient(110deg,#0a2b50,#24114a);border:1px solid #31527e;display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h2{margin:0 0 5px}.cta p{margin:0;color:#c3d6eb}
+footer{margin-top:35px;border-top:1px solid #173353;background:#030914;padding:28px 0;color:var(--muted);font-size:.86rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:var(--cyan)}.disclaimer{max-width:750px;margin-top:12px;font-size:.8rem}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr}.hero-art{min-height:230px}.grid{grid-template-columns:repeat(2,1fr)}.ability-grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:16px 4%;background:#050d1b;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.cta{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.hero{padding-top:48px}.grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.command-table th,.command-table td{padding:10px}.hero h1{letter-spacing:-1.3px}.elements{padding:12px}.element{padding:12px 5px}.ability-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="BendersMC Fan Hub home">BENDERS<span>MC</span> <small style="font-size:.58rem;color:#a8bed7;letter-spacing:1px">FAN HUB</small></a>
+    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navlinks">☰ Menu</button>
+    <nav class="navlinks" id="navlinks">
+      <a href="#modes">Modes</a><a href="#shop">Ranks & Shop</a><a href="#guide">Guide</a><a href="#guilds">Guilds</a><a href="#commands">Commands</a><a href="#faq">FAQ</a><a href="#official">Official Links</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">Independent community guide</div>
+      <h1>Choose your element.<br><em>Make your mark.</em></h1>
+      <p>A mobile-friendly fan hub for exploring BendersMC: game-mode notes, bending basics, command references and quick links to the official server shop.</p>
+      <div class="actions"><a class="btn primary" href="#modes">Explore the guide ↘</a><a class="btn" href="https://shop.bendersmc.co/" target="_blank" rel="noopener">Official shop ↗</a></div>
+    </div>
+    <div class="hero-art" aria-label="Four elemental themes">
+      <div class="elements">
+        <div class="element air"><b>〰</b>AIR<small>Speed & mobility</small></div>
+        <div class="element water"><b>💧</b>WATER<small>Flow & adaptability</small></div>
+        <div class="element earth"><b>◆</b>EARTH<small>Defence & strength</small></div>
+        <div class="element fire"><b>♨</b>FIRE<small>Power & pressure</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="modes">
+ <div class="wrap">
+  <div class="section-head"><div><div class="tag">Find your path</div><h2>Game modes & play styles</h2></div><p>Use these as a starting guide. Modes, commands and rules can change, so confirm details in-game or through official BendersMC pages.</p></div>
+  <div class="grid">
+   <article class="card"><div class="mode-top"><span class="emoji">🌲</span><div><div class="tag">Build & explore</div><h3>Survival</h3></div></div><p>Gather resources, build a base, explore, and learn the server’s survival rules. Check claims, economy and home commands in the current server guide.</p><a class="textlink" href="https://shop.bendersmc.co/survivalservers" target="_blank" rel="noopener">Read survival guide ↗</a></article>
+   <article class="card"><div class="mode-top"><span class="emoji">🏰</span><div><div class="tag">Team strategy</div><h3>Factions</h3></div></div><p>Team up, protect your territory and plan your strategy. Confirm current faction commands and rules before starting a faction.</p><a class="textlink" href="https://shop.bendersmc.co/factionserver" target="_blank" rel="noopener">Check factions page ↗</a></article>
+   <article class="card"><div class="mode-top"><span class="emoji">⚔️</span><div><div class="tag">Practice & compete</div><h3>Battles / PvP</h3></div></div><p>Practice movement, timing and your bending choices. Follow server rules and only use abilities or resource packs that are allowed.</p><a class="textlink" href="https://shop.bendersmc.co/wiki" target="_blank" rel="noopener">Explore official wiki ↗</a></article>
+  </div>
+ </div>
+</section>
+
+<section id="shop">
+ <div class="wrap">
+  <div class="section-head"><div><div class="tag">Support the server</div><h2>Ranks & official shop</h2></div><p>These cards send you to the official BendersMC store. Check the checkout page for the current price, currency, rank details and platform compatibility.</p></div>
+  <div class="grid">
+   <article class="card rank pro"><div class="emoji">👑</div><div class="tier">Pro</div><p class="perks">A rank option for players who want to compare extra perks and progression benefits.</p><a class="btn" href="https://shop.bendersmc.co/package/4384904" target="_blank" rel="noopener">View Pro ↗</a></article>
+   <article class="card rank expert"><div class="emoji">💠</div><div class="tier">Expert</div><p class="perks">Compare the current benefits and limits with the other available ranks.</p><a class="btn" href="https://shop.bendersmc.co/package/4384909" target="_blank" rel="noopener">View Expert ↗</a></article>
+   <article class="card rank master"><div class="emoji">🔮</div><div class="tier">Master</div><p class="perks">Review the full official description before choosing a rank.</p><a class="btn" href="https://shop.bendersmc.co/package/4384911" target="_blank" rel="noopener">View Master ↗</a></article>
+   <article class="card rank avatar"><div class="emoji">🔥</div><div class="tier">Avatar</div><p class="perks">Check the store for the current Avatar rank package and included perks.</p><a class="btn" href="https://shop.bendersmc.co/category/ranks" target="_blank" rel="noopener">Find Avatar ↗</a></article>
+   <article class="card rank titan"><div class="emoji">⚡</div><div class="tier">Titan</div><p class="perks">See the official package details and any available purchase options.</p><a class="btn" href="https://shop.bendersmc.co/package/4384917" target="_blank" rel="noopener">View Titan ↗</a></article>
+   <article class="card"><div class="emoji">🛒</div><h3>Browse every rank</h3><p>Want to compare all current packages? Open the official rank category for the latest listing.</p><a class="btn primary" href="https://shop.bendersmc.co/category/ranks" target="_blank" rel="noopener">Official ranks ↗</a></article>
+  </div>
+  <div class="notice"><strong>Important:</strong> This is an unofficial fan guide. Purchases happen on the official store, not on this website. No commission or referral tracking is active. Only add an affiliate link if BendersMC’s owner explicitly approves it and gives you a valid tracked link.</div>
+ </div>
+</section>
+
+<section id="guide">
+ <div class="wrap">
+  <div class="section-head"><div><div class="tag">Bending basics</div><h2>Elements & beginner tips</h2></div><p>These are general learning notes, not a guarantee that every ability or mechanic works the same on every server version.</p></div>
+  <div class="grid">
+   <article class="card"><div class="emoji" style="color:#9eeaff">〰</div><h3>Air</h3><p>Often associated with mobility and evasion. Practice movement and learn each ability’s range and cooldown.</p></article>
+   <article class="card"><div class="emoji" style="color:#27caff">💧</div><h3>Water</h3><p>Often rewards adaptability and timing. Check which abilities need a specific environment or resource.</p></article>
+   <article class="card"><div class="emoji" style="color:#8bea57">◆</div><h3>Earth</h3><p>Often associated with control and defence. Learn terrain interactions and avoid using abilities where rules prohibit them.</p></article>
+   <article class="card"><div class="emoji" style="color:#ff654d">♨</div><h3>Fire</h3><p>Often focuses on pressure and offensive timing. Practice safely and understand cooldowns before PvP.</p></article>
+   <article class="card"><div class="emoji">📘</div><h3>Learn your abilities</h3><p>Read the server’s current help pages and test abilities in an allowed area before using them in a match.</p><a class="textlink" href="https://shop.bendersmc.co/howtobend" target="_blank" rel="noopener">How to bend ↗</a></article>
+   <article class="card"><div class="emoji">🧭</div><h3>Play fair</h3><p>Use approved settings and packs, respect other players, and ask staff if you are unsure whether something is allowed.</p></article>
+  </div>
+ </div>
+</section>
+
+
+<section id="guilds">
+ <div class="wrap">
+  <div class="section-head"><div><div class="tag">Guilds guide</div><h2>Guilds: everything in one place</h2></div><p>Guilds are player groups for teaming up and building a community. BendersMC has shared a guild tutorial, but a complete official command list was not publicly verifiable when this page was updated. Use the in-game guild menu/help to confirm exact syntax.</p></div>
+  <div class="grid">
+   <article class="card"><div class="emoji">🏰</div><h3>Find the guild menu</h3><p>Try the main <code>/guild</code> command if it is enabled on your current BendersMC mode. Check the menu for available actions and follow its prompts.</p></article>
+   <article class="card"><div class="emoji">🤝</div><h3>Join or invite friends</h3><p>Look for options such as invites, members or recruitment in the guild menu. Ask the guild owner or staff how invites are accepted on the current version.</p></article>
+   <article class="card"><div class="emoji">🛡️</div><h3>Roles & permissions</h3><p>Guild systems commonly have an owner and member roles. Only give leadership or moderation permissions to people you trust. Check the menu to see which roles BendersMC currently supports.</p></article>
+   <article class="card"><div class="emoji">💬</div><h3>Guild chat</h3><p>Look for a guild-chat option in the menu or official help. Keep private details, passwords and account information out of public and guild chat.</p></article>
+   <article class="card"><div class="emoji">🏡</div><h3>Base, claims & safety</h3><p>Do not assume a guild automatically protects land. BendersMC Survival separately documents land claims using a golden shovel; check the rules for the mode you play.</p><a class="textlink" href="https://shop.bendersmc.co/survivalservers" target="_blank" rel="noopener">Official Survival guide ↗</a></article>
+   <article class="card"><div class="emoji">📜</div><h3>Rules & disputes</h3><p>Before starting a guild, agree on respectful behaviour, who manages shared resources, and what happens if someone leaves. Ask staff to settle disputes rather than retaliating.</p></article>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+   <div class="tag">Guild command reference</div>
+   <h3>Commands to check in-game</h3>
+   <p>The commands below are safe starting points to test for a help/menu response. This is not a claim that every command or subcommand is enabled on BendersMC.</p>
+   <div class="tablewrap"><table class="command-table"><thead><tr><th>Try</th><th>What to check</th><th>Reliability</th></tr></thead><tbody>
+    <tr><td><code>/guild</code></td><td>Opens a guild menu or shows guild-related help, if supported.</td><td>Starting point; verify in-game</td></tr>
+    <tr><td><code>/guild help</code></td><td>May show a help list if the server supports this subcommand.</td><td>Possible; not confirmed</td></tr>
+    <tr><td><code>/guilds</code></td><td>Some plugins use this alias, but it may not exist on BendersMC.</td><td>Possible; not confirmed</td></tr>
+    <tr><td><code>/help</code></td><td>Use the server help menu to discover commands available to you.</td><td>General Minecraft/server help</td></tr>
+   </tbody></table></div>
+   <div class="notice"><strong>Important:</strong> Do not copy command lists from other Minecraft servers as if they are BendersMC commands. Guild plugins differ. If a command returns “unknown command” or “no permission”, use the in-game menu or ask BendersMC staff.</div>
+  </div>
+
+  <div class="section-head" style="margin-top:28px"><div><div class="tag">Guild setup checklist</div><h2>Before you start</h2></div><p>Use this checklist to organise your group without guessing how the plugin works.</p></div>
+  <div class="grid">
+   <article class="card"><h3>1. Pick a name</h3><p>Choose a unique, appropriate guild name that follows server rules.</p></article>
+   <article class="card"><h3>2. Decide leadership</h3><p>Choose a reliable owner and agree who may invite or remove members.</p></article>
+   <article class="card"><h3>3. Confirm features</h3><p>Ask whether guild chat, guild homes, land protection, banks, alliances or wars are available. These are not guaranteed features.</p></article>
+   <article class="card"><h3>4. Set expectations</h3><p>Agree on shared builds, items, contributions and how members resolve disagreements.</p></article>
+   <article class="card"><h3>5. Keep the group safe</h3><p>Never share passwords or one-time login codes. Be cautious of links and trades from strangers.</p></article>
+   <article class="card"><h3>6. Check official help</h3><p>BendersMC's official pages and Discord are the best places to confirm current guild behaviour and commands.</p><a class="textlink" href="https://shop.bendersmc.co/wiki" target="_blank" rel="noopener">Official wiki ↗</a></article>
+  </div>
+  <div class="cta" style="margin-top:18px"><div><div class="tag">Official creator tutorial</div><h2>Watch how guilds work</h2><p>BendersMC has published a short guild tutorial. Open it to see the creator's walkthrough.</p></div><a class="btn primary" href="https://www.snapchat.com/@bendersmc/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYd2NsZXZncHJiAZotVfXvAZotVeFFAAAAAQ" target="_blank" rel="noopener">Open guild tutorial ↗</a></div>
+ </div>
+</section>
+
+<section id="commands">
+ <div class="wrap">
+  <div class="section-head"><div><div class="tag">Quick reference</div><h2>Command notebook</h2></div><p>Search this list to find a command idea. Some commands below are common examples and may not be enabled on every BendersMC mode or version.</p></div>
+  <div class="searchrow"><input id="commandSearch" type="search" placeholder="Search commands or purpose…" aria-label="Search commands"><select id="commandFilter" aria-label="Filter commands"><option value="all">All categories</option><option value="general">General</option><option value="bending">Bending</option><option value="survival">Survival</option><option value="factions">Factions</option><option value="guilds">Guilds</option></select></div>
+  <div class="tablewrap"><table class="command-table"><thead><tr><th>Example</th><th>Category</th><th>Purpose</th></tr></thead><tbody id="commandRows">
+   <tr data-category="general"><td><code>/help</code></td><td>General</td><td>Look for the server’s available help commands.</td></tr>
+   <tr data-category="general"><td><code>/spawn</code></td><td>General</td><td>May return you to the spawn area if enabled.</td></tr>
+   <tr data-category="bending"><td><code>/b help</code></td><td>Bending</td><td>Check whether the bending plugin provides a help menu.</td></tr>
+   <tr data-category="bending"><td><code>/b bind</code></td><td>Bending</td><td>Some bending plugins use this to bind an ability to a slot.</td></tr>
+   <tr data-category="bending"><td><code>/b display</code></td><td>Bending</td><td>Some versions use this to display an element or ability list.</td></tr>
+   <tr data-category="survival"><td><code>/home</code></td><td>Survival</td><td>May teleport to a saved home, if the mode supports it.</td></tr>
+   <tr data-category="survival"><td><code>/sethome</code></td><td>Survival</td><td>May save a home location, if available.</td></tr>
+   <tr data-category="factions"><td><code>/f help</code></td><td>Factions</td><td>Common pattern for faction help; check the server’s actual syntax.</td></tr>
+   <tr data-category="guilds"><td><code>/guild</code></td><td>Guilds</td><td>Try to open the guild menu or guild help, if enabled on BendersMC.</td></tr>
+   <tr data-category="guilds"><td><code>/guild help</code></td><td>Guilds</td><td>Possible help subcommand; not verified for BendersMC.</td></tr>
+   <tr data-category="guilds"><td><code>/guilds</code></td><td>Guilds</td><td>Some guild plugins use this alias; may not be enabled on BendersMC.</td></tr>
+  </tbody></table></div>
+  <p style="color:var(--muted);font-size:.85rem;margin-top:12px">Tip: use <code>/help</code> in-game or ask staff for the current command list. Don’t assume a command works just because it appears here.</p>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="wrap">
+  <div class="section-head"><div><div class="tag">Quick answers</div><h2>Frequently asked questions</h2></div></div>
+  <div class="faq">
+   <details><summary>Is this the official BendersMC website?</summary><p>No. This is an independent fan-made guide. The official store and information pages are linked below.</p></details>
+   <details><summary>Can I buy a rank on this site?</summary><p>No. Rank buttons open the official BendersMC store, where you can review the package and complete checkout.</p></details>
+   <details><summary>Can the site earn me money?</summary><p>Not automatically. You would need explicit permission from the owner and an approved referral or affiliate link with a clear commission arrangement. Do not claim to be an official seller without permission.</p></details>
+   <details><summary>Are these commands guaranteed to work?</summary><p>No. Commands vary by server mode, plugin and version. Confirm with the in-game help menu or official staff.</p></details>
+   <details><summary>How do I join?</summary><p>Check the official BendersMC information for the current Java/Bedrock connection instructions and any supported ports. Connection details can change.</p></details>
+  </div>
+ </div>
+</section>
+
+<section id="official">
+ <div class="wrap">
+  <div class="cta"><div><div class="tag">Use trusted links</div><h2>Ready to explore BendersMC?</h2><p>Open official information, read the bending guide or browse the store.</p></div><div class="actions" style="margin:0"><a class="btn primary" href="https://shop.bendersmc.co/" target="_blank" rel="noopener">Official store ↗</a><a class="btn purple" href="https://shop.bendersmc.co/wiki" target="_blank" rel="noopener">Official wiki ↗</a></div></div>
+ </div>
+</section>
+</main>
+<footer>
+ <div class="wrap">
+  <div class="foot"><div class="brand">BENDERS<span>MC</span> FAN HUB</div><div><a href="https://shop.bendersmc.co/" target="_blank" rel="noopener">Official store</a> · <a href="https://shop.bendersmc.co/howtobend" target="_blank" rel="noopener">Bending guide</a> · <a href="https://shop.bendersmc.co/storehelp" target="_blank" rel="noopener">Store help</a></div></div>
+  <div class="disclaimer">Unofficial fan-made resource; not endorsed by or affiliated with BendersMC, Mojang or Microsoft. Names and marks belong to their respective owners. Rank details, server features and commands may change. Always verify purchases and rules through official channels.</div>
+  <div style="margin-top:14px">© <span id="year"></span> BendersMC Fan Hub · Made for community information.</div>
+ </div>
+</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const search=document.getElementById('commandSearch'), filter=document.getElementById('commandFilter');
+function filterRows(){const q=search.value.toLowerCase().trim(),cat=filter.value;document.querySelectorAll('#commandRows tr').forEach(row=>{const matchText=row.innerText.toLowerCase().includes(q),matchCat=cat==='all'||row.dataset.category===cat;row.hidden=!(matchText&&matchCat);});}
+search.addEventListener('input',filterRows);filter.addEventListener('change',filterRows);
+</script>
+</body>
+</html>
